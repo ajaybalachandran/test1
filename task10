@@ -1,0 +1,7 @@
+create table numbers(id int not null primary key,
+					x int not null);
+
+insert into numbers values (1,2),(2,-2), (3,4), (4,-4), (5,-3), (6,0), (7,2), (8,8), (9,-11);
+
+
+select sum(case when x>0 then x else 0 end)SumOfPositiveNums,sum(case when x<0 then x else 0 end)SumOfNegativeNums from numbers;
